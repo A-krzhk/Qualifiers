@@ -1,0 +1,17 @@
+C:\Users\alena\RiderProjects\kursovaya\Qualifiers.Infrastructure\bin\Debug\net9.0\Qualifiers.Infrastructure.deps.json
+C:\Users\alena\RiderProjects\kursovaya\Qualifiers.Infrastructure\bin\Debug\net9.0\Qualifiers.Infrastructure.runtimeconfig.json
+C:\Users\alena\RiderProjects\kursovaya\Qualifiers.Infrastructure\bin\Debug\net9.0\Qualifiers.Infrastructure.dll
+C:\Users\alena\RiderProjects\kursovaya\Qualifiers.Infrastructure\bin\Debug\net9.0\Qualifiers.Infrastructure.pdb
+C:\Users\alena\RiderProjects\kursovaya\Qualifiers.Infrastructure\bin\Debug\net9.0\Qualifiers.Core.dll
+C:\Users\alena\RiderProjects\kursovaya\Qualifiers.Infrastructure\bin\Debug\net9.0\Qualifiers.Core.pdb
+C:\Users\alena\RiderProjects\kursovaya\Qualifiers.Infrastructure\obj\Debug\net9.0\Qualifiers.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\alena\RiderProjects\kursovaya\Qualifiers.Infrastructure\obj\Debug\net9.0\Qualifiers.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alena\RiderProjects\kursovaya\Qualifiers.Infrastructure\obj\Debug\net9.0\Qualifiers.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\alena\RiderProjects\kursovaya\Qualifiers.Infrastructure\obj\Debug\net9.0\Qualifiers.Infrastructure.AssemblyInfo.cs
+C:\Users\alena\RiderProjects\kursovaya\Qualifiers.Infrastructure\obj\Debug\net9.0\Qualifiers.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\alena\RiderProjects\kursovaya\Qualifiers.Infrastructure\obj\Debug\net9.0\Qualifie.FFCA4169.Up2Date
+C:\Users\alena\RiderProjects\kursovaya\Qualifiers.Infrastructure\obj\Debug\net9.0\Qualifiers.Infrastructure.dll
+C:\Users\alena\RiderProjects\kursovaya\Qualifiers.Infrastructure\obj\Debug\net9.0\refint\Qualifiers.Infrastructure.dll
+C:\Users\alena\RiderProjects\kursovaya\Qualifiers.Infrastructure\obj\Debug\net9.0\Qualifiers.Infrastructure.pdb
+C:\Users\alena\RiderProjects\kursovaya\Qualifiers.Infrastructure\obj\Debug\net9.0\Qualifiers.Infrastructure.genruntimeconfig.cache
+C:\Users\alena\RiderProjects\kursovaya\Qualifiers.Infrastructure\obj\Debug\net9.0\ref\Qualifiers.Infrastructure.dll

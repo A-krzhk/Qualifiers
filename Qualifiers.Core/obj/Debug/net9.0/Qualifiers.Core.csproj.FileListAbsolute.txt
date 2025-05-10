@@ -1,0 +1,12 @@
+C:\Users\alena\RiderProjects\kursovaya\Qualifiers.Core\bin\Debug\net9.0\Qualifiers.Core.deps.json
+C:\Users\alena\RiderProjects\kursovaya\Qualifiers.Core\bin\Debug\net9.0\Qualifiers.Core.dll
+C:\Users\alena\RiderProjects\kursovaya\Qualifiers.Core\bin\Debug\net9.0\Qualifiers.Core.pdb
+C:\Users\alena\RiderProjects\kursovaya\Qualifiers.Core\obj\Debug\net9.0\Qualifiers.Core.csproj.AssemblyReference.cache
+C:\Users\alena\RiderProjects\kursovaya\Qualifiers.Core\obj\Debug\net9.0\Qualifiers.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alena\RiderProjects\kursovaya\Qualifiers.Core\obj\Debug\net9.0\Qualifiers.Core.AssemblyInfoInputs.cache
+C:\Users\alena\RiderProjects\kursovaya\Qualifiers.Core\obj\Debug\net9.0\Qualifiers.Core.AssemblyInfo.cs
+C:\Users\alena\RiderProjects\kursovaya\Qualifiers.Core\obj\Debug\net9.0\Qualifiers.Core.csproj.CoreCompileInputs.cache
+C:\Users\alena\RiderProjects\kursovaya\Qualifiers.Core\obj\Debug\net9.0\Qualifiers.Core.dll
+C:\Users\alena\RiderProjects\kursovaya\Qualifiers.Core\obj\Debug\net9.0\refint\Qualifiers.Core.dll
+C:\Users\alena\RiderProjects\kursovaya\Qualifiers.Core\obj\Debug\net9.0\Qualifiers.Core.pdb
+C:\Users\alena\RiderProjects\kursovaya\Qualifiers.Core\obj\Debug\net9.0\ref\Qualifiers.Core.dll

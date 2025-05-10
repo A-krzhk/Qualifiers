@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qualifiers.API", "Qualifiers.API\Qualifiers.API.csproj", "{B75FB429-04BC-41FD-BD65-A82DC985F092}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qualifiers.Core", "Qualifiers.Core\Qualifiers.Core.csproj", "{08257C40-0E61-43C7-98F3-6983D0403749}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qualifiers.Infrastructure", "Qualifiers.Infrastructure\Qualifiers.Infrastructure.csproj", "{FBBD5346-BE36-4F16-8044-9C11EFC4AF87}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B75FB429-04BC-41FD-BD65-A82DC985F092}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B75FB429-04BC-41FD-BD65-A82DC985F092}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B75FB429-04BC-41FD-BD65-A82DC985F092}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B75FB429-04BC-41FD-BD65-A82DC985F092}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08257C40-0E61-43C7-98F3-6983D0403749}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08257C40-0E61-43C7-98F3-6983D0403749}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08257C40-0E61-43C7-98F3-6983D0403749}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08257C40-0E61-43C7-98F3-6983D0403749}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBBD5346-BE36-4F16-8044-9C11EFC4AF87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBBD5346-BE36-4F16-8044-9C11EFC4AF87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBBD5346-BE36-4F16-8044-9C11EFC4AF87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBBD5346-BE36-4F16-8044-9C11EFC4AF87}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
