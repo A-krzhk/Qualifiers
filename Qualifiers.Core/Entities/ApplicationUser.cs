@@ -9,4 +9,6 @@ public class ApplicationUser : IdentityUser
     public string Telegram { get; set; } = string.Empty;
     public string RefreshToken { get; set; } = string.Empty;
     public DateTime RefreshTokenExpiryTime { get; set; }
+    
+    public ICollection<Registration> Registrations { get; set; } = new List<Registration>();
 }

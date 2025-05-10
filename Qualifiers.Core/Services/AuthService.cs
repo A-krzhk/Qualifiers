@@ -37,7 +37,7 @@ public class AuthService : IAuthService
             }
             
             // Проверка валидности роли
-            if (registerDto.Role != RoleConstants.Administrator && registerDto.Role != RoleConstants.User)
+            if (registerDto.Role != RoleConstants.Staff && registerDto.Role != RoleConstants.Participant)
             {
                 return new AuthResponseDTO
                 {
