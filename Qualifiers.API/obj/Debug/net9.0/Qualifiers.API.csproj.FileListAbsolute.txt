@@ -176,3 +176,4 @@ C:\Users\alena\RiderProjects\kursovaya\Qualifiers.Api\obj\Debug\net9.0\refint\Qu
 C:\Users\alena\RiderProjects\kursovaya\Qualifiers.Api\obj\Debug\net9.0\Qualifiers.API.pdb
 C:\Users\alena\RiderProjects\kursovaya\Qualifiers.Api\obj\Debug\net9.0\Qualifiers.API.genruntimeconfig.cache
 C:\Users\alena\RiderProjects\kursovaya\Qualifiers.Api\obj\Debug\net9.0\ref\Qualifiers.API.dll
+C:\Users\alena\RiderProjects\kursovaya\Qualifiers.Api\obj\Debug\net9.0\Qualifiers.API.sourcelink.json

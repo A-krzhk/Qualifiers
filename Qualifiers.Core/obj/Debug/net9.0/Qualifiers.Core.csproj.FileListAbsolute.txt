@@ -10,3 +10,4 @@ C:\Users\alena\RiderProjects\kursovaya\Qualifiers.Core\obj\Debug\net9.0\Qualifie
 C:\Users\alena\RiderProjects\kursovaya\Qualifiers.Core\obj\Debug\net9.0\refint\Qualifiers.Core.dll
 C:\Users\alena\RiderProjects\kursovaya\Qualifiers.Core\obj\Debug\net9.0\Qualifiers.Core.pdb
 C:\Users\alena\RiderProjects\kursovaya\Qualifiers.Core\obj\Debug\net9.0\ref\Qualifiers.Core.dll
+C:\Users\alena\RiderProjects\kursovaya\Qualifiers.Core\obj\Debug\net9.0\Qualifiers.Core.sourcelink.json

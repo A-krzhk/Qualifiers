@@ -21,7 +21,11 @@ public class RegisterDTO
 
     [Required]
     public string LastName { get; set; }
-
+    
+    [Required]
+    public string Role { get; set; }
+    
+    [Required]
     public string Telegram { get; set; }
 }
 
@@ -42,10 +46,4 @@ public class AuthResponseDTO
     public string Token { get; set; }
     public string RefreshToken { get; set; }
     public DateTime? Expiration { get; set; }
-}
-
-public class RefreshTokenDTO
-{
-    [Required]
-    public string RefreshToken { get; set; }
 }

@@ -15,3 +15,4 @@ C:\Users\alena\RiderProjects\kursovaya\Qualifiers.Infrastructure\obj\Debug\net9.
 C:\Users\alena\RiderProjects\kursovaya\Qualifiers.Infrastructure\obj\Debug\net9.0\Qualifiers.Infrastructure.pdb
 C:\Users\alena\RiderProjects\kursovaya\Qualifiers.Infrastructure\obj\Debug\net9.0\Qualifiers.Infrastructure.genruntimeconfig.cache
 C:\Users\alena\RiderProjects\kursovaya\Qualifiers.Infrastructure\obj\Debug\net9.0\ref\Qualifiers.Infrastructure.dll
+C:\Users\alena\RiderProjects\kursovaya\Qualifiers.Infrastructure\obj\Debug\net9.0\Qualifiers.Infrastructure.sourcelink.json

@@ -5,6 +5,7 @@ using System.Text;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using Qualifiers.Core.Constants;
 using Qualifiers.Core.DTOs;
 using Qualifiers.Core.Entities;
 using Qualifiers.Core.Interfaces;
@@ -25,7 +26,6 @@ public class AuthService : IAuthService
 
         public async Task<AuthResponseDTO> RegisterAsync(RegisterDTO registerDto)
         {
-            // Check if user exists
             var userExists = await _userManager.FindByEmailAsync(registerDto.Email);
             if (userExists != null)
             {
@@ -35,8 +35,17 @@ public class AuthService : IAuthService
                     Message = "User already exists!"
                 };
             }
+            
+            // Проверка валидности роли
+            if (registerDto.Role != RoleConstants.Administrator && registerDto.Role != RoleConstants.User)
+            {
+                return new AuthResponseDTO
+                {
+                    IsSuccess = false,
+                    Message = "Invalid role specified!"
+                };
+            }
 
-            // Create new user
             var user = new ApplicationUser
             {
                 Email = registerDto.Email,
@@ -59,11 +68,21 @@ public class AuthService : IAuthService
                 };
             }
 
-            // Generate token
+            // Назначение роли
+            var roleResult = await _userManager.AddToRoleAsync(user, registerDto.Role);
+            if (!roleResult.Succeeded)
+            {
+                var errors = string.Join(", ", roleResult.Errors.Select(e => e.Description));
+                return new AuthResponseDTO
+                {
+                    IsSuccess = false,
+                    Message = $"Failed to assign role: {errors}"
+                };
+            }
+            
             var token = await GenerateJwtToken(user);
             var refreshToken = GenerateRefreshToken();
-
-            // Save refresh token
+            
             user.RefreshToken = refreshToken;
             user.RefreshTokenExpiryTime = DateTime.UtcNow.AddDays(7);
             await _userManager.UpdateAsync(user);
@@ -93,8 +112,7 @@ public class AuthService : IAuthService
 
             var token = await GenerateJwtToken(user);
             var refreshToken = GenerateRefreshToken();
-
-            // Save refresh token
+            
             user.RefreshToken = refreshToken;
             user.RefreshTokenExpiryTime = DateTime.UtcNow.AddDays(7);
             await _userManager.UpdateAsync(user);
@@ -109,56 +127,7 @@ public class AuthService : IAuthService
             };
         }
 
-        public async Task<AuthResponseDTO> RefreshTokenAsync(RefreshTokenDTO refreshTokenDto)
-        {
-            var principal = GetPrincipalFromExpiredToken(refreshTokenDto.RefreshToken);
-            if (principal == null)
-            {
-                return new AuthResponseDTO
-                {
-                    IsSuccess = false,
-                    Message = "Invalid token"
-                };
-            }
-
-            var username = principal.Identity.Name;
-            var user = await _userManager.FindByNameAsync(username);
-
-            if (user == null || user.RefreshToken != refreshTokenDto.RefreshToken || user.RefreshTokenExpiryTime <= DateTime.UtcNow)
-            {
-                return new AuthResponseDTO
-                {
-                    IsSuccess = false,
-                    Message = "Invalid or expired refresh token"
-                };
-            }
-
-            var newToken = await GenerateJwtToken(user);
-            var newRefreshToken = GenerateRefreshToken();
-
-            user.RefreshToken = newRefreshToken;
-            await _userManager.UpdateAsync(user);
-
-            return new AuthResponseDTO
-            {
-                IsSuccess = true,
-                Message = "Token refreshed successfully",
-                Token = newToken,
-                RefreshToken = newRefreshToken,
-                Expiration = DateTime.UtcNow.AddMinutes(_jwtSettings.DurationInMinutes)
-            };
-        }
-
-        public async Task<bool> RevokeTokenAsync(string username)
-        {
-            var user = await _userManager.FindByNameAsync(username);
-            if (user == null)
-                return false;
-
-            user.RefreshToken = null;
-            await _userManager.UpdateAsync(user);
-            return true;
-        }
+        
 
         private async Task<string> GenerateJwtToken(ApplicationUser user)
         {
@@ -172,14 +141,12 @@ public class AuthService : IAuthService
                 new Claim(JwtRegisteredClaimNames.Email, user.Email),
                 new Claim("uid", user.Id)
             };
-
-            // Add roles as claims
+            
             foreach (var role in roles)
             {
                 claims.Add(new Claim(ClaimTypes.Role, role));
             }
 
-            // Add user claims
             claims.AddRange(userClaims);
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSettings.Key));
@@ -210,7 +177,7 @@ public class AuthService : IAuthService
             {
                 ValidateIssuer = true,
                 ValidateAudience = true,
-                ValidateLifetime = false, // Don't validate lifetime here
+                ValidateLifetime = false,
                 ValidateIssuerSigningKey = true,
                 ValidIssuer = _jwtSettings.Issuer,
                 ValidAudience = _jwtSettings.Audience,
